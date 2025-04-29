@@ -1,0 +1,43 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+{% block title %}Check Appointment Date{% endblock %}
+
+
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% if mensaje %}
+<p>{{ mensaje }}</p>
+{% elif timeslotsavaible %}
+    <form method="post" action="{% url 'cita_confirmada' %}" class="form-appointment">
+    {% csrf_token %}
+    <h2 class="form-title">{% trans "Appointment for" %} {{ date }}</h2>
+        <label for="service">{% trans "Select service" %}</label>
+        <select name="service" id="service"required>
+        {% if LANGUAGE_CODE == 'es' %}
+        {% for service in services %}
+            <option value="{{ service.id }}">{{ service.name_es }} - {{ service.price }}€</option>
+        {% endfor %}
+        {% else %}
+        {% for service in services %}
+            <option value="{{ service.id }}">{{ service.name }} - {{ service.price }}€</option>
+        {% endfor %}
+        {% endif %}
+        </select>
+        <label for="timeslot">{% trans "Available hours" %}</label>
+        <select name="timeslot" id="timeslot"required>
+        {% for slot in timeslotsavaible %}
+            <option value="{{ slot.id }}">{{ slot.time|time:"H:i"}}</option>
+        {% endfor %}
+        </select>
+        <label for="client_name">{% trans "Name" %}</label>
+        <input type="text" name="client_name" id="client_name"required>
+        <label for="client_last_name">{% trans "Last Name" %}</label>
+        <input type="text" name="client_last_name" id="client_last_name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="phone_number">{% trans "Phone" %}</label>
+        <input type="text" name="phone_number" id="phone_number" required>
+        <button type="submit" class="btn-appointment">{% trans "Reserve" %}</button>
+    </form>
+{% endif %}
+    {% endblock %}

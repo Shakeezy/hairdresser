@@ -1,0 +1,64 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <title>{% block title %}Document{% endblock %}</title>
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="{% static 'logo-removebg.png' %}" alt="GlamStyle Logo">
+                    <span><a href="{% url 'home' %}" class="nav-link">BARBERSHOP</a></span>
+                </div>
+                <div class="nav-links">
+                    <a href="{% url 'home' %}#servicios" class="nav-link">{% trans "Services" %}</a>
+                    <a href="{% url 'home' %}#equipo" class="nav-link">{% trans "Team" %}</a>
+                    <a href="{% url 'home' %}#galeria" class="nav-link">{% trans "Gallery" %}</a>
+                    <a href="{% url 'home' %}#contacto" class="nav-link">{% trans "Contact" %}</a>
+                    <a href="{% url 'cita_fecha' %}" class="nav-link">{% trans "Make an appointment" %}</a>
+                </div>
+                <div class="language-switcher">
+                    <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="es">
+                        <button type="submit" class="lang-btn"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="24"></button>
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="en">
+                        <button type="submit" class="lang-btn"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="24"></button>
+                    </form>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <main>
+    {% block content %}
+    {% endblock %}
+</main>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 BARBERSHOP - {% trans "All rights reserved" %}</p>
+        </div>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

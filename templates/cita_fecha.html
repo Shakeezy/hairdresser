@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% block title %}Select the appointment date{% endblock %}
+
+{% block content %}
+    <form action="{% url 'cita_formulario' %}" method="POST" class="form-appointment">
+    {% csrf_token %}
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color: brown;">{{message}}</p>  
+    {% endfor %}
+    {% endif %}
+    <h2 class="form-title">{% trans "Make an Appointment" %}</h2>
+        <label for="date-limited">{% trans "Select your appointment date" %}</label>
+        <input type="date" name="date" id="date-limited" class="form-control" lang="{% trans 'es' %}" required>
+        <button type="submit" class="btn-appointment">{% trans "Confirm Appointment Date" %}</button>
+    </form>
+<script src="{% static 'date_limits.js' %}"></script>
+    {% endblock %}

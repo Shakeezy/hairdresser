@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}Appointment confirmed{% endblock %}
+
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<div class="contact-info">
+    <div class="appointment-card">
+        <h3>{% trans "Appointment confirmed" %}</h3>
+        <br>
+        <h4>{% trans "We send a message to your email where there is a link in case you want to cancel the appointment" %}</h4>
+        <br>
+        <div class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+                <h4>{% trans "Service" %}</h4>
+                {% if LANGUAGE_CODE == 'es' %}
+                <p>{{ appointment.service.name_es }}</p>
+                {% else %}
+                <p>{{ appointment.service }}</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-text">
+                <h4>{% trans "Date" %}</h4>
+                <p>{{ appointment.slot.date }} - {% trans "Hour" %}: {{ appointment.slot.time }}</p>
+            </div>
+        </div>
+        
+        <div class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+                <h4>{% trans "Client" %}</h4>
+                <p>{{ appointment.client_name }} {{ appointment.client_last_name }}</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+                <h4>{% trans "Phone" %}</h4>
+                <p>{{ appointment.phone_number }}</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+                <h4>Email</h4>
+                <p>{{ appointment.email }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

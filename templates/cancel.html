@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% block title %}Select the appointment date{% endblock %}
+
+{% block content %}
+    <form action="{% url 'cancel_appointment'  cancel_id %}" method="POST" class="form-appointment">
+        {% csrf_token %}
+    <h2 class="form-title">{% trans "Are you sure to cancel the appointment?" %}</h2>
+        <button type="submit" class="btn-cancel">{% trans "Yes, i am sure" %}</button>
+        <a href="{% url 'home' %}" class="btn-cancel2">{% trans "No, go back" %}</a>
+    </form>
+    {% endblock %}

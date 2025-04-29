@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-19 17:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: .\booking\views.py:27
+msgid "Invalid date format"
+msgstr "Formato de fecha inválido"
+
+#: .\booking\views.py:32
+msgid "The appointment date has expired. Please take another one"
+msgstr "La fecha de la cita ha expirado. Por favor, selecione otra"
+
+#: .\booking\views.py:37
+msgid ""
+"Appointments cannot be scheduled so far in advance. For more information, "
+"please call the following number: 4353456546"
+msgstr ""
+"No se puede concertar cita con tanta antelación en el sistema. "
+"Para más información llame al siguiente número: 23423534"
+
+
+#: .\booking\views.py:44
+msgid "Close for"
+msgstr "Cerrado por"
+
+#: .\booking\views.py:49
+msgid "Close for sunday"
+msgstr "Cerrado por Domingo"
+
+#: .\booking\views.py:151
+msgid "Appointment canceled succesfully"
+msgstr "Cita cancelada con éxito"
+
+#: .\booking\views.py:155
+msgid "Invalid cancel id"
+msgstr "Id de cancelación inválido"
+
+#: .\templates\cita_confirmada.html:8
+msgid "Appointment confirmed"
+msgstr "Cita confirmada"
+
+#: .\templates\cita_confirmada.html:20
+msgid "Service"
+msgstr "Servicio"
+
+#: .\templates\cita_confirmada.html:10
+msgid "Date"
+msgstr "Fecha"
+
+#: .\templates\cita_confirmada.html:10
+msgid "Hour"
+msgstr "Hora"
+
+#: .\templates\cita_confirmada.html:11
+msgid "Client"
+msgstr "Cliente"
+
+#: .\templates\cita_confirmada.html:12 .\templates\cita_formulario.html:30
+#: .\templates\home.html:168
+msgid "Phone"
+msgstr "Teléfono"
+
+#: .\templates\cita_confirmada.html:15
+msgid ""
+"We send a message to your email where there is a link in case you want to "
+"cancel the appointment"
+msgstr "Le hemos mandado un enlace a su email en caso de querer cancelar su cita"
+
+#: .\templates\cita_fecha.html:15
+msgid "Make an Appointment"
+msgstr "Pida cita"
+
+#: .\templates\cita_fecha.html:16
+msgid "Select your appointment date"
+msgstr "Seleccione la fecha de su cita"
+
+#: .\templates\cita_fecha.html:18
+msgid "Confirm Appointment Date"
+msgstr "Confirme fecha"
+
+#: .\templates\cita_fecha.html:17
+msgid "en"
+msgstr "es"
+
+#: .\templates\cita_formulario.html:11
+msgid "Appointment for"
+msgstr "Cita para"
+
+#: .\templates\cita_formulario.html:12
+msgid "Select service"
+msgstr "Seleccione el servicio"
+
+#: .\templates\cita_formulario.html:18
+msgid "Available hours"
+msgstr "Horas disponibles"
+
+#: .\templates\cita_formulario.html:24
+msgid "Name"
+msgstr "Nombre"
+
+#: .\templates\cita_formulario.html:26
+msgid "Last Name"
+msgstr "Apellido"
+
+#: .\templates\cita_formulario.html:32
+msgid "Reserve"
+msgstr "Reservar"
+
+#: .\templates\home.html:11
+msgid "Experts in the art of men's haircuts and grooming"
+msgstr "Expertos en el arte del corte y cuidado del cabello masculino."
+
+#: .\templates\home.html:12 .\templates\layouts\base.html:32
+msgid "Make an appointment"
+msgstr "Pida cita"
+
+#: .\templates\home.html:19
+msgid "Our Services"
+msgstr "Nuestros Servicios"
+
+#: .\templates\home.html:28
+msgid "Hair Cut"
+msgstr "Corte de pelo"
+
+#: .\templates\home.html:29
+msgid ""
+"Custom cuts tailored to your style and face shape. Includes wash and style."
+msgstr "Cortes personalizados adaptados a tu estilo y forma de rostro. Incluye lavado y peinado."
+
+#: .\templates\home.html:37
+msgid "Beard Grooming"
+msgstr "Arreglo de barba"
+
+#: .\templates\home.html:38
+msgid ""
+"Precise beard trimming and shaping. Includes a hot towel and essential oils."
+msgstr "Recorte y perfilado preciso de barba. Incluye toalla caliente y aceites esenciales."
+
+#: .\templates\home.html:46
+msgid "Shaving with a Straight Razor"
+msgstr "Afeitado con navaja"
+
+#: .\templates\home.html:47
+msgid ""
+"Traditional straight razor shave with hot towels for a relaxing experience "
+"and flawless results."
+msgstr "Afeitado tradicional con navaja y toallas calientes para una experiencia relajante."
+
+#: .\templates\home.html:58
+msgid "Meet our team"
+msgstr "Conoce nuestro equipo"
+
+#: .\templates\home.html:68
+msgid "Senior Stylist"
+msgstr "Estilista Senior"
+
+#: .\templates\home.html:69
+msgid ""
+"With over 10 years of experience, Ana is an expert in classic and modern "
+"cuts."
+msgstr "Con más de 10 años de experiencia, Ana es experta en cortes clásicos y modernos."
+
+#: .\templates\home.html:80
+msgid "Specialist in Modern Cuts"
+msgstr "Especialista en Corte moderno"
+
+#: .\templates\home.html:81
+msgid ""
+"Carlos masters the latest trends and cutting techniques for the contemporary "
+"man."
+msgstr "Carlos domina las últimas tendencias y técnicas de corte para el hombre contemporáneo."
+
+
+#: .\templates\home.html:92
+msgid "Professional Colorist"
+msgstr "Colorista Profesional"
+
+#: .\templates\home.html:93
+msgid "Specializing in hair coloring and treatments for all hair types."
+msgstr "Especializado en coloración y tratamientos para todo tipo de cabello."
+
+#: .\templates\home.html:106 .\templates\layouts\base.html:30
+msgid "Gallery"
+msgstr "Galería"
+
+#: .\templates\home.html:143 .\templates\layouts\base.html:31
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\templates\home.html:150
+msgid "Contact Information"
+msgstr "Información de contacto"
+
+#: .\templates\home.html:151
+msgid "We are here to serve you"
+msgstr "Estamos aquí para servirle"
+
+#: .\templates\home.html:158
+msgid "Address"
+msgstr "Dirección"
+
+#: .\templates\home.html:188
+msgid "Schedule"
+msgstr "Horario"
+
+#: .\templates\home.html:189
+msgid "Monday to Friday: 10:00 - 13:00, 17:00 - 20:30"
+msgstr "Lunes a Viernes: 10:00 - 13:00, 17:00 - 20:30"
+
+#: .\templates\home.html:190
+msgid "Saturday: 10:00 - 13:00"
+msgstr "Sábado: 10:00 - 13:00"
+
+#: .\templates\home.html:191
+msgid "Sunday: Closed"
+msgstr "Domingo: Cerrado"
+
+#: .\templates\home.html:199
+msgid "Ubication"
+msgstr "Ubicación"
+
+#: .\templates\home.html:200
+msgid "Find us easily"
+msgstr "Encuéntrenos fácilmente"
+
+#: .\templates\home.html:217
+msgid "How to get there"
+msgstr "Como llegar"
+
+#: .\templates\layouts\base.html:28
+msgid "Services"
+msgstr "Servicios"
+
+#: .\templates\layouts\base.html:29
+msgid "Team"
+msgstr "Equipo"
+
+#: .\templates\layouts\base.html:54
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados."

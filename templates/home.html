@@ -1,0 +1,225 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>BARBERSHOP</h1>
+            <p>{% trans "Experts in the art of men's haircuts and grooming" %}</p>
+            <a href="{% url 'cita_fecha' %}" class="hero-button">{% trans "Make an appointment" %}</a>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>{% trans "Our Services" %}</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>{% trans "Hair Cut" %}</h3>
+                    <p>{% trans "Custom cuts tailored to your style and face shape. Includes wash and style." %}</p>
+                    <p class="service-price">20€</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <h3>{% trans "Beard Grooming" %}</h3>
+                    <p>{% trans "Precise beard trimming and shaping. Includes a hot towel and essential oils." %}</p>
+                    <p class="service-price">15€</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>{% trans "Shaving with a Straight Razor" %}</h3>
+                    <p>{% trans "Traditional straight razor shave with hot towels for a relaxing experience and flawless results." %}</p>
+                    <p class="service-price">25€</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>{% trans "Meet our team" %}</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="static/employer-1.jpg" alt="Ana">
+                    </div>
+                    <h3>Ana</h3>
+                    <p class="team-role">{% trans "Senior Stylist" %}</p>
+                    <p class="team-description">{% trans "With over 10 years of experience, Ana is an expert in classic and modern cuts." %}</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="static/employer-2.jpg" alt="Carlos">
+                    </div>
+                    <h3>Carlos</h3>
+                    <p class="team-role">{% trans "Specialist in Modern Cuts" %}</p>
+                    <p class="team-description">{% trans "Carlos masters the latest trends and cutting techniques for the contemporary man." %}</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="static/employer-3.jpg" alt="Laura">
+                    </div>
+                    <h3>Laura</h3>
+                    <p class="team-role">{% trans "Professional Colorist" %}</p>
+                    <p class="team-description">{% trans "Specializing in hair coloring and treatments for all hair types." %}</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>{% trans "Gallery" %}</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('static/galeria-1.jpg')">
+                    <img src="static/galeria-1.jpg" alt="Barbería trabajo 1">
+                </div>
+                <div class="gallery-item" onclick="openModal('static/galeria-2.jpg')">
+                    <img src="static/galeria-2.jpg" alt="Barbería trabajo 2">
+                </div>
+                <div class="gallery-item" onclick="openModal('static/galeria-3.jpg')">
+                    <img src="static/galeria-3.jpg" alt="Barbería trabajo 3">
+                </div>
+                <div class="gallery-item" onclick="openModal('static/galeria-1.jpg')">
+                    <img src="static/galeria-1.jpg" alt="Barbería trabajo 4">
+                </div>
+                <div class="gallery-item" onclick="openModal('static/galeria-2.jpg')">
+                    <img src="static/galeria-2.jpg" alt="Barbería trabajo 5">
+                </div>
+                <div class="gallery-item" onclick="openModal('static/galeria-3.jpg')">
+                    <img src="static/galeria-3.jpg" alt="Barbería trabajo 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header light">
+                <h2>{% trans "Contact" %}</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>{% trans "Contact Information" %}</h3>
+                        <p class="contact-subtitle">{% trans "We are here to serve you" %}</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>{% trans "Address" %}</h4>
+                                <p>Av. Principal 123, Ciudad</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>{% trans "Phone" %}</h4>
+                                <p>+123 456 7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@glamstyle.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>{% trans "Schedule" %}</h4>
+                                <p>{% trans "Monday to Friday: 10:00 - 13:00, 17:00 - 20:30" %}</p>
+                                <p>{% trans "Saturday: 10:00 - 13:00" %}</p>
+                                <p>{% trans "Sunday: Closed" %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="contact-card">
+                        <h3>{% trans "Ubication" %}</h3>
+                        <p class="contact-subtitle">{% trans "Find us easily" %}</p>
+                        
+                        <div class="map-wrapper">
+                            <!-- Replace the src URL with your actual Google Maps embed URL -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-0.1276!3d51.5072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMwJzI2LjAiTiAwwrAwNyc0MC4wIlc!5e0!3m2!1ses!2ses!4v1616000000000!5m2!1ses!2ses" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        
+                        <div class="map-directions">
+                            <a href="https://maps.google.com/?q=Av.+Principal+123,+Ciudad" target="_blank" class="directions-button">
+                                <i class="fas fa-directions"></i>{% trans "How to get there" %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
